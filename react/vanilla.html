@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<span>Total clicks: <span id="cnt">0</span></span>
+		<button id="btn">Click me!</button>
+		<button id="reset">Reset</button>
+	</body>
+	<script>
+		const	button = document.getElementById("btn");
+		const	reset = document.getElementById("reset");
+		const	cnt = document.getElementById("cnt");
+		let		counter = 0;
+		function handleClick() {
+			counter = counter + 1;
+			cnt.innerText = counter;
+		}
+		function buttonReset() {
+			counter = 0;
+			cnt.innerText = counter;
+		}
+		button.addEventListener("click", handleClick);
+		reset.addEventListener("click", buttonReset);
+	</script>
+</html>
